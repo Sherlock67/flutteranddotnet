@@ -1,0 +1,14 @@
+﻿using flutterdotnet.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace flutterdotnet.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+
+        }
+        public DbSet<Person> Persons { get; set; }
+    }
+}
